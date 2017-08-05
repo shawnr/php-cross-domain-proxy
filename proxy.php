@@ -136,8 +136,6 @@ if (CSAJAX_FILTERS) {
 if ($request_method == 'GET' && count($request_params) > 0 && (!array_key_exists('query', $p_request_url) || empty($p_request_url['query']))) {
     if (count($request_params) > 0){
         $request_url = $request_url . '&' . http_build_query($request_params);
-    } else {
-        $request_url .= '?' . http_build_query($request_params);
     }
 
 
