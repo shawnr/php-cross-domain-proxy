@@ -139,6 +139,7 @@ if ($request_method == 'GET' && count($request_params) > 0 && (!array_key_exists
     echo "this check failed";
     echo "Request_url: " . $request_url;
 }
+echo "Outer Request_url: " . $request_url;
 
 // let the request begin
 $ch = curl_init($request_url);
