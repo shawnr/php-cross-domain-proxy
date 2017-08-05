@@ -71,6 +71,7 @@ $request_method = $_SERVER['REQUEST_METHOD'];
 if ('GET' == $request_method) {
     $request_params = $_GET;
 } elseif ('POST' == $request_method) {
+    exit();
     $request_params = $_POST;
     if (empty($request_params)) {
         $data = file_get_contents('php://input');
@@ -79,6 +80,7 @@ if ('GET' == $request_method) {
         }
     }
 } elseif ('PUT' == $request_method || 'DELETE' == $request_method) {
+    exit();
     $request_params = file_get_contents('php://input');
 } else {
     $request_params = null;
@@ -139,7 +141,7 @@ if ($request_method == 'GET' && count($request_params) > 0 && (!array_key_exists
     }
 
 
-    //echo "Request_url: " . $request_url;
+    echo "Request_url: " . $request_url;
 } else {
     //echo "this check failed";
     if (count($request_params) > 0){
@@ -147,9 +149,9 @@ if ($request_method == 'GET' && count($request_params) > 0 && (!array_key_exists
     } else {
         $request_url .= '?' . http_build_query($request_params);
     }
-    //echo "Request_url: " . $request_url;
+    echo "Request_url: " . $request_url;
 }
-//echo "Outer Request_url: " . $request_url;
+echo "Outer Request_url: " . $request_url;
 
 // let the request begin
 $ch = curl_init($request_url);
