@@ -20,7 +20,7 @@
  * Enables or disables filtering for cross domain requests.
  * Recommended value: true
  */
-define('CSAJAX_FILTERS', true);
+define('CSAJAX_FILTERS', false);
 
 /**
  * If set to true, $valid_requests should hold only domains i.e. a.example.com, b.example.com, usethisdomain.com
@@ -134,7 +134,7 @@ if (CSAJAX_FILTERS) {
 if ($request_method == 'GET' && count($request_params) > 0 && (!array_key_exists('query', $p_request_url) || empty($p_request_url['query']))) {
     $request_url .= '?' . http_build_query($request_params);
 }
-
+$request_url = $request_url . '&' . http_build_query($request_params);
 // let the request begin
 $ch = curl_init($request_url);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $request_headers);   // (re-)send headers
