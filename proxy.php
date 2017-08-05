@@ -136,6 +136,8 @@ if (CSAJAX_FILTERS) {
 if ($request_method == 'GET' && count($request_params) > 0 && (!array_key_exists('query', $p_request_url) || empty($p_request_url['query']))) {
     if (count($request_params) > 0){
         $request_url = $request_url . '&' . http_build_query($request_params);
+    } else {
+        $request_url .= '?' . http_build_query($request_params);
     }
 
 
@@ -150,6 +152,9 @@ if ($request_method == 'GET' && count($request_params) > 0 && (!array_key_exists
     echo "Request_url: " . $request_url;
 }
 echo "Outer Request_url: " . $request_url;
+if (substr($request_url, -1) == "?") {
+    $request_url = rtrim(trim($request_url), "?");
+}
 
 // let the request begin
 $ch = curl_init($request_url);
