@@ -137,6 +137,7 @@ if ($request_method == 'GET' && count($request_params) > 0 && (!array_key_exists
     echo "Request_url: " . $request_url;
 } else {
     echo "this check failed";
+    echo "Request_url: " . $request_url;
 }
 
 // let the request begin
