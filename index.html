@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Rash Rewind: CORS Proxy</title>
+  <meta name="description" content="A simple CORS proxy.">
+  <meta name="author" content="Shawn Rider">
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
+  <script src="js/bootstrap.min.js" defer></script>
+
+  <!-- custom game styles -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- custom game JS code -->
+  <script src="js/main.js" defer></script>
+</head>
+<body class="container">
+  <h1 class="game-title">A Simple CORS Proxy</h1>
+  <p class="lead">
+    This site provides a simple, no-warranty, as-is, use-at-your-own-risk CORS
+    Proxy for experimenation and development purposes. You can pass through a
+    request from your JavaScript application to any API server by prepending the
+    URL <span class="code">http://rashrewind.com/proxy.php?csurl=</span> to your API request.
+  </p>
+  <p class="lead">
+    This service is intended to proxy RESTful API calls expecting a JSON response.
+  </p>
+  <h2>Some Examples</h2>
+  <ul>
+    <li><a href="http://rashrewind.com/proxy.php?csurl=https://jsonplaceholder.typicode.com/posts">http://rashrewind.com/proxy.php?csurl=https://jsonplaceholder.typicode.com/posts</a></li>
+    <li><a href="http://rashrewind.com/proxy.php?csurl=http://www.mocky.io/v2/5985ed871100006f0d2a8ab0">http://rashrewind.com/proxy.php?csurl=http://www.mocky.io/v2/5985ed871100006f0d2a8ab0</a></li>
+  </ul>
+  <h2>Build Your Own</h2>
+  <p class="lead">Try it yourself: Paste the URL for your RESTful API call below:</p>
+  <form action="proxy.php" method="get">
+  <p>
+    <span class="code">http://rashrewind.com/proxy.php?csurl=</span><input type="text" placeholder="Your API URL here." name="csurl" class="code">
+  </p>
+  <p><input class="btn btn-block btn-primary" value="Create Proxy URL" type="submit"></p>
+  </form>
+  <hr>
+  <p><b>Please Note:</b> The service provided here is purely for experimentation and temporary. It may go away at any time. You can <a href="https://github.com/shawnr/php-cross-domain-proxy">fork the code that powers this site on Github</a>. If you intend to use a CORS Proxy in your ongoing project, please deploy your own version of this code.</p>
+  <p>This site does not store any user data or information about the requests that are proxied.</p>
+
+</body>
+</html>

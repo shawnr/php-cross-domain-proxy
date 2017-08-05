@@ -1,0 +1,53 @@
+/* Styles for WATS 3020 Browser Game */
+span.code {
+    background: rgba(150, 154, 151, 1);
+    font-family: Consolas, monospace;
+    display: inline-block;
+    padding: 5px;
+}
+input.code {
+    font-family: Consolas, monospace;
+    color: #666;
+}
+body {
+    background-color: rgba(10, 46, 54, 1);
+}
+html {
+    background-color: rgba(10, 46, 54, 1);
+}
+
+/* colors */
+
+.spring-green-color {
+    color: rgba(39, 251, 107, 1);
+}
+.baby-powder-color {
+    color: rgba(253, 255, 252, 1);
+}
+.phthalo-green-color {
+    color: rgba(10, 46, 54, 1);
+}
+
+.selective-yellow-color {
+    color: rgba(255, 186, 8, 1);
+}
+.spanish-gray-color {
+    color: rgba(150, 154, 151, 1);
+}
+
+.spring-green-bg {
+    background-color: rgba(39, 251, 107, 1);
+}
+.baby-powder-bg {
+    background-color: rgba(253, 255, 252, 1);
+}
+.phthalo-green-bg {
+    background-color: rgba(10, 46, 54, 1);
+}
+
+.selective-yellow-bg {
+    background-color: rgba(255, 186, 8, 1);
+}
+.spanish-gray-bg {
+    background-color: rgba(150, 154, 151, 1);
+}
