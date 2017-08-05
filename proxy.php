@@ -151,11 +151,11 @@ if ($request_method == 'GET' && count($request_params) > 0 && (!array_key_exists
     }
     echo "Request_url: " . $request_url;
 }
-echo "Outer Request_url: " . $request_url;
+
 if (substr($request_url, -1) == "?") {
     $request_url = rtrim(trim($request_url), "?");
 }
-
+echo "Outer Request_url: " . $request_url;
 // let the request begin
 $ch = curl_init($request_url);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $request_headers);   // (re-)send headers
