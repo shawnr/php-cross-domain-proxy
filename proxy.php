@@ -143,6 +143,11 @@ if ($request_method == 'GET' && count($request_params) > 0 && (!array_key_exists
     echo "Request_url: " . $request_url;
 } else {
     echo "this check failed";
+    if (count($request_params) > 0){
+        $request_url = $request_url . '&' . http_build_query($request_params);
+    } else {
+        $request_url .= '?' . http_build_query($request_params);
+    }
     echo "Request_url: " . $request_url;
 }
 echo "Outer Request_url: " . $request_url;
