@@ -8,6 +8,15 @@ span.code {
 input.code {
     font-family: Consolas, monospace;
     color: #666;
+    border: none;
+    width: 50%;
+    padding: 5px;
+}
+p {
+    font-weight: 300;
+}
+b {
+    font-weight: 400;
 }
 body {
     background-color: rgba(10, 46, 54, 1);
