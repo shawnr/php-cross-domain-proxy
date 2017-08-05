@@ -134,6 +134,9 @@ if (CSAJAX_FILTERS) {
 if ($request_method == 'GET' && count($request_params) > 0 && (!array_key_exists('query', $p_request_url) || empty($p_request_url['query']))) {
     $request_url .= '?' . http_build_query($request_params);
     //$request_url = $request_url . '&' . http_build_query($request_params);
+    echo "Request_url: " . $request_url;
+} else {
+    echo "this check failed";
 }
 
 // let the request begin
