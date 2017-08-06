@@ -172,6 +172,7 @@ if (is_array($curl_options) && 0 <= count($curl_options)) {
 
 // retrieve response (headers and content)
 $response = curl_exec($ch);
+header("Access-Control-Allow-Origin: *");
 curl_close($ch);
 
 // split response to header and content
